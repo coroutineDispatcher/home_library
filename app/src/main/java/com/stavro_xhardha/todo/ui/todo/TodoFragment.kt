@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -13,11 +14,11 @@ import kotlinx.android.synthetic.main.todo_fragment.*
 
 class TodoFragment : Fragment() {
 
+    private lateinit var todoViewModel: TodoViewModel
+
     companion object {
         fun newInstance() = TodoFragment()
     }
-
-    private lateinit var viewModel: TodoViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return inflater.inflate(R.layout.todo_fragment, container, false)
@@ -32,7 +33,12 @@ class TodoFragment : Fragment() {
 
         rv_notes.layoutManager = GridLayoutManager(activity, 2)
 
-        viewModel = ViewModelProviders.of(this).get(TodoViewModel::class.java)
+        todoViewModel = ViewModelProviders.of(this).get(TodoViewModel::class.java)
+
+//        todoViewModel.notesList.observe(this, Observer { notes ->
+//            //todo add adapter
+//
+//        })
 
     }
 
