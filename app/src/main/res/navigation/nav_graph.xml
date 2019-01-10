@@ -7,7 +7,7 @@
               android:label="todo_fragment" tools:layout="@layout/todo_fragment">
         <action android:id="@+id/action_todoFragment_to_addNewItemFragment" app:destination="@id/addNewItemFragment"/>
     </fragment>
-    <fragment android:id="@+id/addNewItemFragment" android:name="com.stavro_xhardha.todo.ui.new_item.AddNewItemFragment"
+    <fragment android:id="@+id/addNewItemFragment" android:name="com.stavro_xhardha.todo.ui.todo.AddNewItemFragment"
               android:label="add_new_item_fragment" tools:layout="@layout/add_new_item_fragment">
     </fragment>
 </navigation>

@@ -1,4 +1,4 @@
-package com.stavro_xhardha.todo.ui.new_item
+package com.stavro_xhardha.todo.ui.todo
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,6 @@ import androidx.navigation.Navigation
 import com.stavro_xhardha.todo.R
 import com.stavro_xhardha.todo.model.Note
 import com.stavro_xhardha.todo.ui.TodoViewModelFactory
-import com.stavro_xhardha.todo.ui.todo.TodoViewModel
 import kotlinx.android.synthetic.main.add_new_item_fragment.*
 
 class AddNewItemFragment : Fragment() {

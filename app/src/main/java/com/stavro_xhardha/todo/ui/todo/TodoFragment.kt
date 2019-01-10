@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
@@ -41,10 +42,10 @@ class TodoFragment : Fragment() {
         todoViewModel = ViewModelProviders.of(this, TodoViewModelFactory(activity!!.application))
             .get(TodoViewModel::class.java)
 
-//        todoViewModel.notesList.observe(this, Observer { notes ->
-//            //todo add adapter
-//
-//        })
+        todoViewModel.notesList.observe(this, Observer { notes ->
+            //todo add adapter
+
+        })
 
     }
 }
