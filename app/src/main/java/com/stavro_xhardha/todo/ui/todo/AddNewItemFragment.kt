@@ -9,14 +9,9 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import com.stavro_xhardha.todo.R
 import com.stavro_xhardha.todo.model.Note
-import com.stavro_xhardha.todo.ui.TodoViewModelFactory
 import kotlinx.android.synthetic.main.add_new_item_fragment.*
 
 class AddNewItemFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = AddNewItemFragment()
-    }
 
     private lateinit var viewModel: TodoViewModel
 
@@ -34,8 +29,10 @@ class AddNewItemFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this, TodoViewModelFactory(activity!!.application))
-            .get(TodoViewModel::class.java)
+        viewModel = ViewModelProviders.of(
+            this,
+            TodoViewModelFactory(activity!!.application)
+        ).get(TodoViewModel::class.java)
     }
 
 }

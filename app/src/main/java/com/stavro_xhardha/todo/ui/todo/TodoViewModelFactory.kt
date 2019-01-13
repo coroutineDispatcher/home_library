@@ -1,9 +1,8 @@
-package com.stavro_xhardha.todo.ui
+package com.stavro_xhardha.todo.ui.todo
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.stavro_xhardha.todo.ui.todo.TodoViewModel
 
 class TodoViewModelFactory(private val application: Application) : ViewModelProvider.NewInstanceFactory() {
 

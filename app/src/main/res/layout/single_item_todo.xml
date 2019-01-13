@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <com.google.android.material.card.MaterialCardView
+            android:id="@+id/single_note_card"
+            android:layout_width="match_parent"
+            android:elevation="@dimen/card_elevation"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mtrl_card_spacing"
+            android:layout_marginTop="@dimen/mtrl_card_spacing"
+            android:layout_marginRight="@dimen/mtrl_card_spacing"
+            android:minHeight="200dp">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:maxLines="1"
+                    android:text="@string/note_title"
+                    android:id="@+id/single_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <TextView
+                    android:maxLines="1"
+                    android:text="@string/note_title"
+                    android:id="@+id/single_item_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <ImageView
+                    android:id="@+id/single_item_delete"
+                    android:padding="@dimen/card_elevation"
+                    android:layout_gravity="end"
+                    android:layout_weight="5"
+                    android:src="@drawable/ic_delete_black_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
