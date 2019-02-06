@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.stavro_xhardha.todo.model.Note
 import com.stavro_xhardha.todo.model.NoteDao
 
-@Database(entities = arrayOf(Note::class), version = 1)
+@Database(entities = arrayOf(Note::class), version = 1, exportSchema = false)
 abstract class NotesDatabase : RoomDatabase() {
     abstract fun notesDao(): NoteDao
 

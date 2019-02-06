@@ -1,4 +1,4 @@
-package com.stavro_xhardha.todo.ui.todo
+package com.stavro_xhardha.todo.ui.todo.add_new_item
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,11 +9,12 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import com.stavro_xhardha.todo.R
 import com.stavro_xhardha.todo.model.Note
+import com.stavro_xhardha.todo.ui.todo.TodoViewModelFactory
 import kotlinx.android.synthetic.main.add_new_item_fragment.*
 
 class AddNewItemFragment : Fragment() {
 
-    private lateinit var viewModel: TodoViewModel
+    private lateinit var viewModel: AddNewItemViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.add_new_item_fragment, container, false)
@@ -32,7 +33,7 @@ class AddNewItemFragment : Fragment() {
         viewModel = ViewModelProviders.of(
             this,
             TodoViewModelFactory(activity!!.application)
-        ).get(TodoViewModel::class.java)
+        ).get(AddNewItemViewModel::class.java)
     }
 
 }

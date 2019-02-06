@@ -1,4 +1,4 @@
-package com.stavro_xhardha.todo.ui.todo
+package com.stavro_xhardha.todo.ui.todo.todo
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.stavro_xhardha.todo.R
+import com.stavro_xhardha.todo.ui.todo.TodoViewModelFactory
 import kotlinx.android.synthetic.main.todo_fragment.*
 
 class TodoFragment : Fragment() {

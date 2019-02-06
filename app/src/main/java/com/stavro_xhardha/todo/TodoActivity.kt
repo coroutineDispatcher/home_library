@@ -2,7 +2,6 @@ package com.stavro_xhardha.todo
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.stavro_xhardha.todo.ui.todo.TodoFragment
 
 class TodoActivity : AppCompatActivity() {
 

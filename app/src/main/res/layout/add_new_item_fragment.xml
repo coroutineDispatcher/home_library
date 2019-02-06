@@ -5,7 +5,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.todo.AddNewItemFragment">
+        tools:context=".ui.todo.add_new_item.AddNewItemFragment">
 
     <EditText
             android:hint="@string/note_title"

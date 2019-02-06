@@ -1,21 +1,16 @@
-package com.stavro_xhardha.todo.ui.todo
+package com.stavro_xhardha.todo.ui.todo.add_new_item
 
 import android.app.Application
 import android.os.AsyncTask
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
 import com.stavro_xhardha.todo.model.Note
 import com.stavro_xhardha.todo.repository.NotesRepository
 
-
-class TodoViewModel(application: Application) : AndroidViewModel(application) {
-
+class AddNewItemViewModel(application: Application) : AndroidViewModel(application) {
     private val notesRepository: NotesRepository
-    internal var notesList: LiveData<List<Note>>
 
     init {
         notesRepository = NotesRepository(application)
-        notesList = notesRepository.getAllNotes()
     }
 
     fun insertNote(note: Note) {
