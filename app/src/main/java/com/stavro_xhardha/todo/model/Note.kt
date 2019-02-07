@@ -11,10 +11,14 @@ data class Note(
     val id: Int = 0,
 
     @NonNull
-    @ColumnInfo(name = "note_title")
+    @ColumnInfo(name = "book_title")
     var title: String,
 
     @NonNull
-    @ColumnInfo(name = "note_description")
-    var description: String
+    @ColumnInfo(name = "book_author")
+    var author: String,
+
+    @NonNull
+    @ColumnInfo(name = "book_type")
+    var type: String
 )

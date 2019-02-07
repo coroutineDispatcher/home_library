@@ -24,7 +24,7 @@ class TodoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val navController = Navigation.findNavController(view)
-        crd_add_new_note.setOnClickListener {
+        fab_add_new_note.setOnClickListener {
             navController.navigate(R.id.addNewItemFragment, null)
         }
     }
@@ -41,7 +41,7 @@ class TodoFragment : Fragment() {
             .get(TodoViewModel::class.java)
 
         todoViewModel.notesList.observe(this, Observer { notes ->
-            rv_notes.adapter = TodoAdapter(notes)
+            rv_notes.adapter = TodoAdapter(notes, activity!!.application , this)
 
         })
 

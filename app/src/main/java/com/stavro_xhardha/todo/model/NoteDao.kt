@@ -8,7 +8,7 @@ import androidx.room.Query
 
 @Dao
 interface NoteDao {
-    @Query(" Select * from notes order by id desc")
+    @Query(" Select * from notes order by book_author")
     fun getAllNotes(): LiveData<List<Note>>
 
     @Insert

@@ -29,4 +29,8 @@ class NotesRepository(application: Application) {
             .subscribeOn(Schedulers.computation())
             .subscribe()
     }
+
+    fun deleteNote(note: Note) {
+        notesDao.delete(note)
+    }
 }

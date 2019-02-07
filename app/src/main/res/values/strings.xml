@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Note it</string>
-    <string name="note_title">Title</string>
-    <string name="note_description">Description</string>
+    <string name="note_title">Titulli</string>
+    <string name="note_description">Autori</string>
     <string name="add">Add</string>
     <string name="add_new_note">Add new note here…</string>
+    <string name="book_type">LLoji</string>
+    <string name="book_added">Libri u shtua</string>
+    <string name="fill_all_data">Mbushi te gjitha te dhenat</string>
 </resources>

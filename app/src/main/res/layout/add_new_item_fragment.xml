@@ -6,8 +6,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.todo.add_new_item.AddNewItemFragment">
-
     <EditText
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
             android:hint="@string/note_title"
             android:maxLines="1"
             android:id="@+id/etTitle"
@@ -15,12 +17,27 @@
             android:layout_height="wrap_content"/>
 
     <EditText
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
             android:hint="@string/note_description"
             android:id="@+id/etDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+    <EditText
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:hint="@string/book_type"
+            android:id="@+id/etType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
     <Button
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
             android:text="@string/add"
             android:id="@+id/btnAddText"
             android:layout_width="match_parent"
