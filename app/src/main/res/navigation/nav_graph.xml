@@ -3,11 +3,11 @@
             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/nav_graph" app:startDestination="@id/todoFragment">
 
-    <fragment android:id="@+id/todoFragment" android:name="com.stavro_xhardha.todo.ui.todo.todo.TodoFragment"
+    <fragment android:id="@+id/todoFragment" android:name="com.stavro_xhardha.home_library.ui.book.todo.BooksFragment"
               android:label="todo_fragment" tools:layout="@layout/todo_fragment">
         <action android:id="@+id/action_todoFragment_to_addNewItemFragment" app:destination="@id/addNewItemFragment"/>
     </fragment>
-    <fragment android:id="@+id/addNewItemFragment" android:name="com.stavro_xhardha.todo.ui.todo.add_new_item.AddNewItemFragment"
+    <fragment android:id="@+id/addNewItemFragment" android:name="com.stavro_xhardha.home_library.ui.book.add_new_item.AddNewItemFragment"
               android:label="add_new_item_fragment" tools:layout="@layout/add_new_item_fragment">
     </fragment>
 </navigation>

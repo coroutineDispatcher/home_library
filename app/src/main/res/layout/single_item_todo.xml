@@ -16,35 +16,40 @@
             app:layout_constraintBottom_toBottomOf="parent">
         <FrameLayout android:layout_width="match_parent"
                      android:layout_height="wrap_content">
-            <TextView
-                    android:layout_marginLeft="8dp"
-                    android:id="@+id/single_item_title"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/md_divider_dark_theme"
-                    android:textSize="24sp"
-                    android:text="Gordon B. Hinckley"
-            />
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/single_item_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/md_divider_dark_theme"
+                        android:textSize="24sp"
+                        android:text="Gordon B. Hinckley"
+                />
 
-            <TextView
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="32dp"
-                    android:id="@+id/single_item_description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/single_item_title"
-                    android:text="@string/note_description"
-            />
+                <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="32dp"
+                        android:id="@+id/single_item_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/single_item_title"
+                        android:text="@string/note_description"
+                />
 
-            <TextView
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="48dp"
-                    android:id="@+id/single_item_type"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/single_item_description"
-                    android:text="@string/note_description"
-            />
+                <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="48dp"
+                        android:id="@+id/single_item_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/single_item_description"
+                        android:text="@string/note_description"
+                />
+            </LinearLayout>
+
             <ImageView
                     android:id="@+id/iv_delete_note"
                     android:layout_marginBottom="8dp"

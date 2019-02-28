@@ -64,4 +64,5 @@ dependencies {
     implementation 'com.google.dagger:dagger-android-support:2.20'
     annotationProcessor 'com.google.dagger:dagger-android-processor:2.16'
     implementation 'com.google.android.material:material:1.0.0'
+    implementation 'android.arch.navigation:navigation-fragment:1.0.0-rc02'
 }

@@ -1,9 +1,9 @@
-package com.stavro_xhardha.todo
+package com.stavro_xhardha.home_library
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-class TodoActivity : AppCompatActivity() {
+class BookActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

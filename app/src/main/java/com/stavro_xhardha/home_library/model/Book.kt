@@ -1,4 +1,4 @@
-package com.stavro_xhardha.todo.model
+package com.stavro_xhardha.home_library.model
 
 import androidx.annotation.NonNull
 import androidx.room.ColumnInfo
@@ -6,7 +6,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "notes")
-data class Note(
+data class Book(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
 

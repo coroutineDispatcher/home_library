@@ -1,4 +1,4 @@
-package com.stavro_xhardha.todo.model
+package com.stavro_xhardha.home_library.model
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -7,13 +7,13 @@ import androidx.room.Insert
 import androidx.room.Query
 
 @Dao
-interface NoteDao {
+interface BookDao {
     @Query(" Select * from notes order by book_author")
-    fun getAllNotes(): LiveData<List<Note>>
+    fun getAllNotes(): LiveData<List<Book>>
 
     @Insert
-    fun insertNewNote(note: Note)
+    fun insertNewNote(book: Book)
 
     @Delete
-    fun delete(note: Note)
+    fun delete(book: Book)
 }

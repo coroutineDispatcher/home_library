@@ -1,4 +1,4 @@
-package com.stavro_xhardha.todo.ui.todo.todo
+package com.stavro_xhardha.home_library.ui.book.todo
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,13 +9,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.stavro_xhardha.todo.R
-import com.stavro_xhardha.todo.ui.todo.TodoViewModelFactory
+import com.stavro_xhardha.home_library.R
+import com.stavro_xhardha.home_library.ui.book.TodoViewModelFactory
 import kotlinx.android.synthetic.main.todo_fragment.*
 
-class TodoFragment : Fragment() {
+class BooksFragment : Fragment() {
 
-    private lateinit var todoViewModel: TodoViewModel
+    private lateinit var bookViewModel: BookViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return inflater.inflate(R.layout.todo_fragment, container, false)
@@ -34,14 +34,14 @@ class TodoFragment : Fragment() {
 
         rv_notes.layoutManager = LinearLayoutManager(activity)
 
-        todoViewModel = ViewModelProviders.of(
+        bookViewModel = ViewModelProviders.of(
             this,
             TodoViewModelFactory(activity!!.application)
         )
-            .get(TodoViewModel::class.java)
+            .get(BookViewModel::class.java)
 
-        todoViewModel.notesList.observe(this, Observer { notes ->
-            rv_notes.adapter = TodoAdapter(notes, activity!!.application , this)
+        bookViewModel.notesList.observe(this, Observer { notes ->
+            rv_notes.adapter = BooksAdapter(notes, activity!!.application , this)
 
         })
 

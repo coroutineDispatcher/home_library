@@ -1,4 +1,4 @@
-package com.stavro_xhardha.todo.ui.todo.add_new_item
+package com.stavro_xhardha.home_library.ui.book.add_new_item
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import com.stavro_xhardha.todo.R
-import com.stavro_xhardha.todo.model.Note
+import com.stavro_xhardha.home_library.R
+import com.stavro_xhardha.home_library.model.Book
 import kotlinx.android.synthetic.main.add_new_item_fragment.*
 
 class AddNewItemFragment : Fragment() {
@@ -26,7 +26,7 @@ class AddNewItemFragment : Fragment() {
                 && !etType.text.toString().isEmpty()
             ) {
                 viewModel.insertNote(
-                    Note(
+                    Book(
                         title = etTitle.text.toString(), author = etDescription.text.toString(),
                         type = etType.text.toString()
                     )

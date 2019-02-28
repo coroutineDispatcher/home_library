@@ -1,4 +1,4 @@
-package com.stavro_xhardha.todo.ui.todo.todo
+package com.stavro_xhardha.home_library.ui.book.todo
 
 import android.app.Application
 import android.view.LayoutInflater
@@ -6,16 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.RecyclerView
-import com.stavro_xhardha.todo.R
-import com.stavro_xhardha.todo.model.Note
-import com.stavro_xhardha.todo.ui.todo.TodoViewModelFactory
+import com.stavro_xhardha.home_library.R
+import com.stavro_xhardha.home_library.model.Book
+import com.stavro_xhardha.home_library.ui.book.TodoViewModelFactory
 import kotlinx.android.synthetic.main.single_item_todo.view.*
 
-class TodoAdapter(
-    var list: List<Note>,
+class BooksAdapter(
+    var list: List<Book>,
     var application: Application,
-    var todoFragment: TodoFragment
-) : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
+    var booksFragment: BooksFragment
+) : RecyclerView.Adapter<BooksAdapter.TodoViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoViewHolder =
         TodoViewHolder(
@@ -24,7 +24,7 @@ class TodoAdapter(
                 parent,
                 false
             ),
-            application, todoFragment
+            application, booksFragment
         )
 
 
@@ -33,20 +33,20 @@ class TodoAdapter(
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) = holder.bind(list[position])
 
 
-    class TodoViewHolder(itemView: View, application: Application, val todoFragment: TodoFragment) :
+    class TodoViewHolder(itemView: View, application: Application, val booksFragment: BooksFragment) :
         RecyclerView.ViewHolder(itemView) {
         val app = application
-        fun bind(note: Note) = with(itemView) {
+        fun bind(book: Book) = with(itemView) {
             val viewModel = ViewModelProviders.of(
-                todoFragment,
+                booksFragment,
                 TodoViewModelFactory(app)
             )
-                .get(TodoViewModel::class.java)
-            single_item_title.text = note.title
-            single_item_description.text = note.author
-            single_item_type.text = note.type
+                .get(BookViewModel::class.java)
+            single_item_title.text = book.title
+            single_item_description.text = book.author
+            single_item_type.text = book.type
             iv_delete_note.setOnClickListener { it ->
-                viewModel.deleteNote(note)
+                viewModel.deleteNote(book)
             }
         }
     }
