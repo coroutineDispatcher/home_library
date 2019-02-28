@@ -1,4 +1,4 @@
-package com.stavro_xhardha.home_library.ui.book.todo
+package com.stavro_xhardha.home_library.ui.book.booksview
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.stavro_xhardha.home_library.R
-import com.stavro_xhardha.home_library.ui.book.TodoViewModelFactory
+import com.stavro_xhardha.home_library.ui.book.BookViewModelFactory
 import kotlinx.android.synthetic.main.todo_fragment.*
 
 class BooksFragment : Fragment() {
@@ -36,7 +36,7 @@ class BooksFragment : Fragment() {
 
         bookViewModel = ViewModelProviders.of(
             this,
-            TodoViewModelFactory(activity!!.application)
+            BookViewModelFactory(activity!!.application)
         )
             .get(BookViewModel::class.java)
 

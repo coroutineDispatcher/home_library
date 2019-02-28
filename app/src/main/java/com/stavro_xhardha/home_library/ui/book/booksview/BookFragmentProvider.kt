@@ -1,4 +1,4 @@
-package com.stavro_xhardha.home_library.ui.book.todo
+package com.stavro_xhardha.home_library.ui.book.booksview
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector

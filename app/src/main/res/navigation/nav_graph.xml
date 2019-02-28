@@ -3,7 +3,7 @@
             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/nav_graph" app:startDestination="@id/todoFragment">
 
-    <fragment android:id="@+id/todoFragment" android:name="com.stavro_xhardha.home_library.ui.book.todo.BooksFragment"
+    <fragment android:id="@+id/todoFragment" android:name="com.stavro_xhardha.home_library.ui.book.booksview.BooksFragment"
               android:label="todo_fragment" tools:layout="@layout/todo_fragment">
         <action android:id="@+id/action_todoFragment_to_addNewItemFragment" app:destination="@id/addNewItemFragment"/>
     </fragment>

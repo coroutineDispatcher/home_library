@@ -1,4 +1,4 @@
-package com.stavro_xhardha.home_library.ui.book.todo
+package com.stavro_xhardha.home_library.ui.book.booksview
 
 import android.app.Application
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.RecyclerView
 import com.stavro_xhardha.home_library.R
 import com.stavro_xhardha.home_library.model.Book
-import com.stavro_xhardha.home_library.ui.book.TodoViewModelFactory
+import com.stavro_xhardha.home_library.ui.book.BookViewModelFactory
 import kotlinx.android.synthetic.main.single_item_todo.view.*
 
 class BooksAdapter(
@@ -39,7 +39,7 @@ class BooksAdapter(
         fun bind(book: Book) = with(itemView) {
             val viewModel = ViewModelProviders.of(
                 booksFragment,
-                TodoViewModelFactory(app)
+                BookViewModelFactory(app)
             )
                 .get(BookViewModel::class.java)
             single_item_title.text = book.title
